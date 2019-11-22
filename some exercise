@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+#zip
+a=[1,2,3]
+b=[4,5,6]
+c=[9,7,3]
+d=zip(a,b,c)
+print list(d)
+for i,j,k in zip(a,b,c):
+	print (i/2,j*2,k**2)
+print '*'*30
+#lambda
+#define a easy function
+fun=lambda x,y:(x+y)/(x-y)
+x=int (input('input x='))
+y=int (input('input y='))
+print "the function's result is "+str(fun(x,y))
+print '*'*30
+#map
+#map（）函数，需要传两个值，一个是传一个函数，另外一个是参数，算是高阶函数；但里面#参数需要提前先定义不能是整数，然后map返回是对象需要加list（）转化
+def func(x,y):
+	return (x+y)%(y-x**2)
+print 'the result is' 
+print list(map(func,[4],[90]))
+print '*'*30
+print 'the result is'
+print list(map(lambda x,y:y-x,[4],[90]))
+//////////////////////////////////////////////////
+[(1, 4, 9), (2, 5, 7), (3, 6, 3)]
+(0, 8, 81)
+(1, 10, 49)
+(1, 12, 9)
+******************************
+input x=90
+input y=45
+the function's result is 3
+******************************
+the result is
+[20]
+******************************
+the result is
+[86]
